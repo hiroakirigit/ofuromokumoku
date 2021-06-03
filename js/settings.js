@@ -1,0 +1,73 @@
+particlesJS('particle',{
+    "particles":{
+//--シェイプの設定----------
+      "number":{
+        "value":300,
+        "density":{
+          "enable":true,
+          "value_area":500
+        }
+      },
+      "shape":{
+        "type":"circle"
+      },
+      "opacity":{
+        "value":0.01
+      },
+      "size":{
+        "value":200,
+        "random":true,
+          "anime":{
+              "enable":true,
+              "anim.speed":40,
+              "anim.size_min":30,
+          }
+      },
+//--------------------
+
+//--線の設定----------
+      "line_linked":{
+        "enable":false,
+        "distance":100,
+        "color":"#fff",
+        "opacity":0.1,
+        "width":150
+      },
+//--------------------
+
+//--動きの設定----------
+      "move":{
+        "speed":5,
+        "direction":"top",
+        "random":true,
+      }
+//--------------------
+    },
+    "interactivity":{
+      "detect_on":"canvas",
+      "events":{
+//--マウスオーバー時の処理----------
+        "onhover":{
+          "enable":false
+        },
+//--------------------
+
+//--クリック時の処理----------
+        "onclick":{
+          "enable":true,
+          "mode":"repulse"
+        }
+//--------------------
+      },
+      "modes":{
+//--シェイプがカーソルから逃げる----------
+        "repulse":{
+          "distance":250
+        }
+//--------------------
+      }
+    },
+    "retina_detect":true,
+    "resize":true
+  }
+);

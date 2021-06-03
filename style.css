@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+    font-family: 'digital';
+    src:url('DISPLAY FREE TFB.ttf');
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    position:relative;
+    perspective:1000px;
+}
+#particle{
+    width: 100%;
+    height: 100%;
+    background-color: #818FA3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    z-index: 0;
+}
+#wrapper{
+    height: 1000px;
+    width: 100%;
+    
+}
+#content-wrapper{
+    width: 80%;
+    margin: 0 auto;
+    z-index:999;
+    position:relative;
+    padding: 100px 0;
+    background-color:transparent;
+}
+
+#sample1{
+    width: 70%;
+    height:400px;
+    z-index:100;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    transition:all .8s linear;
+}
+.flex{
+    display: flex;
+}
+.jcc{
+    justify-content: center;
+}
+.jcse{
+    justify-content: space-evenly;
+}
+.aic{
+    align-items: center;
+}
+.aifa{
+    align-items:flex-end;
+}
+.sample1{
+    /*border:3px solid #000;*/
+    background-color:#E5E5E5;border-radius:10px;
+}
+.sample1__top{
+    height: 40%;
+    border: 1px solid #ccc;
+    background-color: #DEDBDB;
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px;
+    position: relative;
+}
+.sample1_circle{
+    width: 50px;
+    height: 50px;
+    border:1px solid #C8C8C8;
+    border-radius:50%;
+background-color: #DCD9D4;
+ background-image: linear-gradient(135deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+ background-blend-mode: soft-light,screen;
+ position:relative;
+}
+.sample1_circle::before{
+    content:"";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#DEDBDB 10%,transparent 100%);
+    position:absolute;
+    top: -3px;
+    left: -3px;
+}
+.sample1_circle:nth-of-type(1)::after{
+    content:"ECO+CARE";
+    position:absolute;
+    left: 50%;
+    bottom: -25px;
+    font-size: 20px;
+    color:#949494;
+    transform:translateX(-50%);
+}
+.sample1_display{
+    width: 60%;
+    height: 65%;
+/*    border:1px solid #000;*/
+    border-radius:10px;  
+    background-color:rgba(121,0,255,0.15);
+}
+
+.sample1__bottom{
+    height: 60%;
+   /* border:3px solid pink;*/
+    position: relative;
+}
+.sample1__top::after{
+    content:"▼";
+    position: absolute;
+    bottom:-25px;
+    right: 5px;
+    font-size: 13px;
+    color: #8E8D8D;
+    display: block;
+    transform:rotate(-90deg);
+}
+.sample1__bottom::before{
+    content:"OYU";
+    position:absolute;
+    bottom:5px;
+    left:5px;
+    font-size: 22px;
+    color: #5c5c5c;
+    letter-spacing: .1em;
+}
+.sample1__bottom::after{
+    content:"open";
+    position: absolute;
+    top:0;
+    right: 25px;
+    font-size: 28px;
+    color: #5C5C5C;
+    cursor:pointer;
+}
+
+.sample1__bottom .l-button{
+    width: 70px;
+    height: 70px;
+    border:1px solid #C1C1C1;
+    border-radius:15px;
+    box-shadow: 0px 0px 0px -2px rgba(10,10,10,0.1), 3px 2px 10px -6px #444 inset;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 5%;
+    cursor:pointer;
+}
+.sample1__bottom .l-button:last-child{
+    margin-right: 0;
+}
+
+.sample1__bottom > div{
+    margin-bottom: 30px;
+}
+.sample1__bottom p{
+    font-size: 20px;
+    color: #929292;
+    font-weight: bolder;
+    margin: auto;
+    letter-spacing: .15em;
+}
+.sample1__bottom div:nth-of-type(1) p{
+    line-height: 50px;
+}
+.sample1__bottom div:nth-of-type(2) p{
+    line-height: 50px;
+}
+.add-mt{
+   margin-top:5px;
+    
+}
+.sample1_display {
+ color:rgba(35,0,74,0.85);
+}
+.sample1_display span{
+    letter-spacing: 0.01em;
+    display: block; transform:skewX(-5deg);
+    position:relative;
+    z-index:100;
+}
+.sample1_display > p:first-child span::before{
+    content:"シャワー";
+    display: block;
+    position:absolute;
+    font-size: 12px;
+    top:-20px;
+    left: 60%;
+    font-family: san-serif;
+    font-weight: lighter; transform:translateX(-50%) skewX(0);
+    white-space: nowrap;
+}
+.sample1_display > p:last-child span::before{
+    content:"ふろ";
+    display: block;
+    position:absolute;
+    font-size: 12px;
+    top:-20px;
+    left: 50%;
+    font-family: san-serif;
+    font-weight: lighter; transform:translateX(-50%) skewX(0);
+    white-space: nowrap;
+    letter-spacing:1em;
+}
+.display__center{
+    flex-direction: column;
+    justify-content: space-between;
+   align-items:center;
+    padding: 5px 0 12px 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+.mark{
+    opacity:0;
+}
+.colormark span{
+    transform:skew(0);
+    font-size: 22px;
+    font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+}
+#sample-outer{
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.on{
+    opacity:1;
+}
+.fa-bell{
+    color:rgba(255,255,0,.50);
+}
+.yusuen{
+    color:rgba(0,129,0,0.50);
+}
+.oi{
+    color:rgba(0,0,255,.5);
+}
+.jidou{
+    color:rgba(95,95,95,0.80);
+}
+.fa-power-off{
+    color:rgba(255,0,0,.50);
+}
+.display__center p span{
+    font-size: 22px;
+}
+.display__center p span::after{
+    content:":";
+    position:absolute;
+    top:0;
+    left:40%;
+    transform: translateX(-50%);
+    font-family: san-serif;
+}
+.display__center span{
+    margin: 0 5px 0 0;
+}
+.display__center span:last-child{
+    margin-right: 0;
+}
+.sample1_display > p:last-of-type span{
+    letter-spacing: 0.25em;
+}
+.sp-font{
+    font-family: 'digital';
+    font-weight:bold;
+    font-size: 60px;
+}
