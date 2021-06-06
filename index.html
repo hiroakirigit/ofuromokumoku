@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <title>お風呂がわきました。</title>
-
+<link rel="stylesheet" href="DISPLAY FREE TFB.ttf">
+<link rel="stylesheet" href="style.css">
 <script src="js/particles.js" defer></script>
 <script src="js/settings.js" defer></script>
+<script src="https://kit.fontawesome.com/039c3f47f4.js" crossorigin="anonymous"></script>
 <script src="js/app.js" defer></script>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="DISPLAY FREE TFB.ttf">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
 </head>
 
 <body>
@@ -20,29 +20,86 @@
                 <div class="sample1__top flex jcse aic">
                    <div class="sample1_circle"></div>
                     <div class="sample1_display flex jcse aifa">
-                        <p><span class="sp-font">40</span></p>
+                        <p><span class="sp-font popout">40</span></p>
                         <div class="display__center flex">
                             <div class="colormark flex">
-                                <span><i class="fas fa-bell mark"></i></span>
-                                <span class="yusuen mark">優先</span>
-                                <span class="oi mark">追</span>
-                                <span class="jidou mark">自動</span>
-                                <span><i class="fas fa-power-off mark"></i></span>
+                                <span class="popout"><i class="fas fa-bell mark"></i></span>
+                                <span class="yusuen mark popout">優先</span>
+                                <span class="oi mark popout">追</span>
+                                <span class="jidou mark popout">自動</span>
+                                <span class="popout"><i class="fas fa-power-off mark"></i></span>
                             </div>
-                            <p id="time"><span class="sp-font">18&#058;00</span></p>
+                            <p class="sp-font popout" id="time"></p>
                         </div>
-                        <p><span class="sp-font">41</span></p>
+                        <p><span class="sp-font popout">41</span></p>
                     </div>
                     <div class="sample1_circle"></div>
                 </div>
-                <div class="sample1__bottom flex jcc aifa">
-                    <div class="l-button"><p class="s-font">呼出</p></div>
-                    <div class="l-button"><p class="s-font">優先</p></div>
-                    <div class="l-button"><p class="s-font add-mt">追い<br>だき</p></div>
-                    <div class="l-button"><p class="s-font add-mt">ふろ<br>自動</p></div>
-                    <div class="l-button"><p class="s-font add-mt">ON<br>OFF</p></div>
+                <div>
+                    <p id="jsOpenTrigger" class="opentrigger">OPEN</p>
+                </div>
+                <div class="panel-overlay flex">
+                    <div class="innerbtn flex" id="innerbtn">
+                        <p class="degree">温度</p>
+                        <p class="amount">量</p>
+                        <p class="addHot">足し湯</p>
+                        <p class="addCool">足し水</p>
+                    </div>
+                    <div id="jsBottom" class="sample1__bottom flex jcc aifa">
+                        <div class="l-button"><p class="s-font">呼出</p></div>
+                        <div class="l-button"><p class="s-font">優先</p></div>
+                        <div class="l-button"><p class="s-font add-mt">追い<br>だき</p></div>
+                        <div class="l-button"><p class="s-font add-mt">ふろ<br>自動</p></div>
+                        <div class="l-button"><p class="s-font add-mt">ON<br>OFF</p></div>
+                    </div>
+                    <div id="js-clickOpen" class="hideBox"></div>
                 </div>
             </div>
+            </div>
+            <div class="text-wrapper">
+                <div class="text slidedown">
+                    <p class="__main">最高の癒しのために</p>
+                    <p class="__desc">満足できるお風呂を作り続けることが私たちの仕事です。<br>
+                        ボタン一つでお湯の質を変えることも可能です。<br>
+                        使う人の現在の体温、体調に基づいてお湯の温度を変えてくれるリモコンです。
+                    </p>
+                </div>
+            </div>
+            <div class="text-wrapper">
+                <div class="text slidedown">
+                    <p class="__main">モノだけじゃなく空間の提供</p>
+                    <p class="__desc">私たちが売るのはリモコンだけではありません<br>
+                        快適な浴室で過ごしていくために、お客様が望む浴室を提供いたします。<br>
+                        モノだけでなく、空間を作り出すスペシャリストが対応いたします。
+                    </p>
+                </div>
+            </div>
+            <div class="solution-wrapper flex ">
+                <div class="bath-img">
+                    <div class="text hidetext">
+                        <p class="__desc"><span>埼玉県富士見市在住</span><br>
+                            <span>50代夫婦</span>
+                        </p>
+                        <p>新築の家の浴室を納品させていただきました。</p>
+                    </div>
+                    <img src="bath1.jpeg" alt="浴室の写真" width="500" height="350">
+                </div>
+                <div class="bath-img">
+                    <img src="bath2.jpg" alt="浴槽の写真" width="500" height="350">
+                    <div class="text hidetext">
+                        <p class="__desc"><span>東京都足立区在住</span><br>
+                        <span>30代夫婦</span>
+                        </p>
+                        <p>リフォームの際に浴室をリニューアルさせていただきました。</p>
+                    </div>
+                </div>
+                <div class="bath-img">
+                    <div class="text hidetext">
+                        <p class="__desc"><span>大手全国チェーンホテル</span></p>
+                        <p>多くのお客様が気持ちよく、ストレスなく利用してもらえるように設計いたしました。</p>
+                    </div>    
+                    <img src="bath3.jpg" alt="浴室の写真" width="500" height="700">
+                </div>
             </div>
         </div>
         <div id="particle"></div>
