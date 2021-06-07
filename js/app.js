@@ -21,26 +21,27 @@ button.forEach(function(target){
 
 const hoverarea = document.getElementById('sample-outer');
 const sample1 = document.getElementById('sample1');
-hoverarea.addEventListener('mousemove',(event)=>{
-
-    var axisX = (window.innerWidth/2 - event.pageX)/90;
-    var axisY = (window.innerHeight/2 - event.pageY)/90;
-  
-    sample1.style.transform = `rotateX(${-axisX}deg) rotateY(${-axisY}deg)`;
-    sample1.style.transition = "all .5s linear";
-});
 var text3d = document.querySelectorAll('.popout');
-
 hoverarea.addEventListener('mousemove',(event)=>{
+
+    var axisX = (window.innerWidth/2 - event.pageX)/120;
+    var axisY = (window.innerHeight/2 - event.pageY)/120;
+  
+    sample1.style.transform = `rotateX(${axisY}deg) rotateY(${-axisX}deg)`;
+    sample1.style.transition = "all .8s linear";
+
+    var text3d = document.querySelectorAll('.popout');
+
     text3d.forEach((target)=>{
-        target.style.transform = " translateY(10px) translateZ(70px)";
+        target.style.transform = " translateY(20px) translateZ(70px)";
     });
 });
-hoverarea.addEventListener('mouseleave',(event)=>{
+hoverarea.addEventListener('mouseout',(event)=>{
     sample1.style.transform = "rotateX(0deg) rotateY(0deg)";
+    sample1.style.transform = "all .6s linear";
     text3d.forEach((target)=>{
-        target.style.transform = "translateZ(0)";
-        target.style.transition = "all .5s linear";
+        target.style.transform = "translateY(0) translateZ(0)";
+        target.style.transition = "all .6s linear";
     });
 });
 
@@ -90,4 +91,12 @@ window.addEventListener('scroll',()=>{
         }
     });
     
+});
+
+var menuItem = document.querySelectorAll('.nav-menu');
+menuItem.forEach((target)=>{
+    target.addEventListener('mouseenter',(event)=>{
+        var footerDisplay = document.getElementById('panel-display');
+        footerDisplay.firstElementChild.textContent = target.innerHTML;   
+});
 });
